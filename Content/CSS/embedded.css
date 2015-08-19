@@ -1,0 +1,38 @@
+html, body {
+	height:100%;
+	width: 100%;
+}
+
+.mapdiv {
+	max-height: 100%;
+	max-width:100%;
+	min-height: 100%;
+	min-width:100%;
+}
+
+.mapdiv img {
+	max-height: none !important;
+	max-width:none !important;
+	height: auto !important;
+	width: auto !important;
+}
+
+#firstRow {
+	margin-top: 40px;
+	height: 300px;
+}
+
+#cadcorpLink {
+	display:block;
+	text-indent: -1000em;
+	overflow:hidden;
+	background-image: url(../img/Cadcorp-SIS-Logo_white.png);
+	height: 40px;
+	width: 189px;
+}
+
+.hero-unit {
+	margin-top: 20px;
+	background-color: #3E6DA1;
+	color: #ffffff;
+}
