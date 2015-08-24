@@ -268,7 +268,7 @@
 
 
                         <asp:GridView ID="GridView1" runat="server" CssClass="table table-hover" OnRowDataBound="GridView1_RowDataBound"
-                            OnSelectedIndexChanged="OnSelectedIndexChanged" AllowPaging="true" OnPageIndexChanging="OnPaging" AutoGenerateColumns="false">
+                            OnSelectedIndexChanged="OnSelectedIndexChanged" AllowPaging="true" OnPageIndexChanging="OnPaging" AutoGenerateColumns="true">
                             <Columns>
                                 <asp:ButtonField Text="Select" CommandName="Select" ItemStyle-Width="30" ControlStyle-CssClass="btn btn-info" ButtonType="Button" HeaderText="Select Incident" />
 

@@ -173,7 +173,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
         WinAuth.AddArea((WindowsAuthentication.PerformancePortal.Mos));
         WinAuth.TrackerSql();
-        Response.Redirect("http://hq-ict-09440v:8080/CorVu3/g?MOSv20");
+        Response.Redirect("http://hq-ict-09440v:8080/CorVu3/go?MOS");
     }
 
     protected void Emergency_OnClick(object sender, EventArgs e)

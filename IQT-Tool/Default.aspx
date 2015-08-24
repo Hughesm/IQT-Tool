@@ -13,9 +13,7 @@
             <p>
               Welcome <asp:Label ID="Name" runat="server" Text=""></asp:Label>to the Incident Query Tool. This tool will allow you perform searches on all incidents and allow you to view the incident details.
             </p>
-
-
-            <%--<p><a class="btn btn-primary" role="button" runat="server" href="Search.aspx" id="JumboSearch">Search Incidents &raquo;</a></p>--%>
+                    
         </div>
     </div>
 
@@ -37,8 +35,8 @@
             <div class="col-md-4">
 
                 <h2>Reports</h2>
-                <p>Currently Disabled. This section will generate reports based on completed Incidents. Print and export your generated reports.</p>
-                <p><a class="btn btn-primary" href="Search.aspx" role="button">View Reports &raquo;</a></p>
+                <p> This page shows pre-generated reports based on completed Incidents. Reports include; Casualty and Fatality data, Deliberate Fires and reports going back to 2013. </p>
+                <p><a class="btn btn-primary" href="http://hq-ict-12592v/PerformancePortal/IncidentReports.aspx" role="button">View Reports &raquo;</a></p>
             </div>
         </div>
 
