@@ -16,7 +16,7 @@ namespace IRS
         {
 
             SQLConnection ConnectToDataBase;
-            string SQLConnect = "Data Source=hq-ict-12580s;Initial Catalog=dmtreporting_dev;User=dmt;Password=Dmteam;";
+            string SQLConnect = "";
             DataSet IncidentDataSet = new DataSet();
             ConnectToDataBase = new SQLConnection();
 
