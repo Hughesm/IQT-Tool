@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeNode.Core</name>
+    </assembly>
+    <members>
+        <member name="T:CodeNode.Core.Utils.Ensure">
+            <summary>
+                CodeNode class that will throw exceptions when conditions are not satisfied.
+            </summary>
+        </member>
+        <member name="M:CodeNode.Core.Utils.Ensure.That(System.Boolean,System.String)">
+            <summary>
+                Ensures that the given expression is true
+            </summary>
+            <exception cref="T:System.Exception">Exception thrown if false condition</exception>
+            <param name="condition">Condition to test/ensure</param>
+            <param name="message">Message for the exception</param>
+            <exception cref="T:System.Exception">Thrown when <paramref name="condition"/> is false</exception>
+        </member>
+        <member name="M:CodeNode.Core.Utils.Ensure.That``1(System.Boolean,System.String)">
+            <summary>
+                Ensures that the given expression is true
+            </summary>
+            <typeparam name="TException">Type of exception to throw</typeparam>
+            <param name="condition">Condition to test/ensure</param>
+            <param name="message">Message for the exception</param>
+            <exception>Thrown when
+                <cref>TException</cref>
+                <paramref name="condition"/> is false</exception>
+            <remarks><see cref="!:TException"/> must have a constructor that takes a single string</remarks>
+        </member>
+        <member name="M:CodeNode.Core.Utils.Ensure.Not``1(System.Boolean,System.String)">
+            <summary>
+                Ensures given condition is false
+            </summary>
+            <typeparam name="TException">Type of exception to throw</typeparam>
+            <param name="condition">Condition to test</param>
+            <param name="message">Message for the exception</param>
+            <exception>Thrown when
+                <cref>TException</cref>
+                <paramref name="condition"/> is true</exception>
+            <remarks><see cref="!:TException"/> must have a constructor that takes a single string</remarks>
+        </member>
+        <member name="M:CodeNode.Core.Utils.Ensure.Not(System.Boolean,System.String)">
+            <summary>
+                Ensures given condition is false
+            </summary>
+            <param name="condition">Condition to test</param>
+            <param name="message">Message for the exception</param>
+            <exception cref="T:System.Exception">Thrown when <paramref name="condition"/> is true</exception>
+        </member>
+        <member name="M:CodeNode.Core.Utils.Ensure.NotNull(System.Object,System.String)">
+            <summary>
+                Ensures given object is not null
+            </summary>
+            <param name="value">Value of the object to test for null reference</param>
+            <param name="message">Message for the Null Reference Exception</param>
+            <exception cref="T:System.NullReferenceException">Thrown when <paramref name="value"/> is null</exception>
+        </member>
+        <member name="M:CodeNode.Core.Utils.Ensure.Equal``1(``0,``0,System.String)">
+            <summary>
+                Ensures given objects are equal
+            </summary>
+            <typeparam name="T">Type of objects to compare for equality</typeparam>
+            <param name="left">First Value to Compare</param>
+            <param name="right">Second Value to Compare</param>
+            <param name="message">Message of the exception when values equal</param>
+            <exception cref="T:System.Exception">
+                Exception is thrown when <paramref cref="!:left"/> not equal to
+                <paramref cref="!:right"/>
+            </exception>
+            <remarks>Null values will cause an exception to be thrown</remarks>
+        </member>
+        <member name="M:CodeNode.Core.Utils.Ensure.NotEqual``1(``0,``0,System.String)">
+            <summary>
+                Ensures given objects are not equal
+            </summary>
+            <typeparam name="T">Type of objects to compare for equality</typeparam>
+            <param name="left">First Value to Compare</param>
+            <param name="right">Second Value to Compare</param>
+            <param name="message">Message of the exception when values equal</param>
+            <exception cref="T:System.Exception">Thrown when <paramref cref="!:left"/> equal to <paramref cref="!:right"/></exception>
+            <remarks>Null values will cause an exception to be thrown</remarks>
+        </member>
+        <member name="M:CodeNode.Core.Utils.Ensure.Contains``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.String)">
+            <summary>
+                Ensures given collection contains a value that satisfied a predicate
+            </summary>
+            <typeparam name="T">Collection type</typeparam>
+            <param name="collection">Collection to test</param>
+            <param name="predicate">Predicate where one value in the collection must satisfy</param>
+            <param name="message">Message of the exception if value not found</param>
+            <exception cref="T:System.Exception">
+                Thrown if collection is null, empty or doesn't contain a value that satisfies <paramref cref="!:predicate"/>
+            </exception>
+        </member>
+        <member name="M:CodeNode.Core.Utils.Ensure.Items``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Boolean},System.String)">
+            <summary>
+                Ensures ALL items in the given collection satisfy a predicate
+            </summary>
+            <typeparam name="T">Collection type</typeparam>
+            <param name="collection">Collection to test</param>
+            <param name="predicate">Predicate that ALL values in the collection must satisfy</param>
+            <param name="message">Message of the exception if not all values are valid</param>
+            <exception cref="T:System.Exception">
+                Thrown if collection is null, empty or not all values satisfies <paramref cref="!:predicate"/>
+            </exception>
+        </member>
+        <member name="M:CodeNode.Core.Utils.Ensure.NotNullOrEmpty(System.String,System.String)">
+            <summary>
+                Ensures given string is not null or empty
+            </summary>
+            <param name="value">String value to compare</param>
+            <param name="message">Message of the exception if value is null or empty</param>
+            <exception cref="T:System.Exception">string value is null or empty</exception>
+        </member>
+        <member name="T:CodeNode.Core.Utils.Ensure.Argument">
+            <summary>
+                Argument-specific ensure methods
+            </summary>
+        </member>
+        <member name="M:CodeNode.Core.Utils.Ensure.Argument.Is(System.Boolean,System.String)">
+            <summary>
+                Ensures given condition is true
+            </summary>
+            <param name="condition">Condition to test</param>
+            <param name="message">Message of the exception if condition fails</param>
+            <exception cref="T:System.ArgumentException">
+                Thrown if <paramref cref="!:condition"/> is false
+            </exception>
+        </member>
+        <member name="M:CodeNode.Core.Utils.Ensure.Argument.IsNot(System.Boolean,System.String)">
+            <summary>
+                Ensures given condition is false
+            </summary>
+            <param name="condition">Condition to test</param>
+            <param name="message">Message of the exception if condition is true</param>
+            <exception cref="T:System.ArgumentException">
+                Thrown if <paramref cref="!:condition"/> is true
+            </exception>
+        </member>
+        <member name="M:CodeNode.Core.Utils.Ensure.Argument.NotNull(System.Object,System.String)">
+            <summary>
+                Ensures given value is not null
+            </summary>
+            <param name="value">Value to test for null</param>
+            <param name="paramName">Name of the parameter in the method</param>
+            <exception cref="T:System.ArgumentNullException">
+                Thrown if <paramref cref="!:value"/> is null
+            </exception>
+        </member>
+        <member name="M:CodeNode.Core.Utils.Ensure.Argument.NotNullOrEmpty(System.String,System.String)">
+            <summary>
+                Ensures the given string value is not null or empty
+            </summary>
+            <param name="value">Value to test for null or empty</param>
+            <param name="paramName">Name of the parameter in the method</param>
+            <exception cref="T:System.ArgumentException">
+                Thrown if <paramref cref="!:value"/> is null or empty string
+            </exception>
+        </member>
+        <member name="F:CodeNode.Core.Utils.RegexUtils.SlugRegex">
+            <summary>
+                A regular expression for validating slugs.
+                Does not allow leading or trailing hyphens or whitespace
+                Credit to Ben Foster
+            </summary>
+        </member>
+        <member name="F:CodeNode.Core.Utils.RegexUtils.SlugWithSegmentsRegex">
+            <summary>
+                A regular expression for validating slugs with segments
+                Does not allow leading or trailing hyphens or whitespace
+                Credit to Ben Foster
+            </summary>
+        </member>
+        <member name="F:CodeNode.Core.Utils.RegexUtils.IpAddressRegex">
+            <summary>
+                A regular expression for validating IPAddresses. Taken from
+                http://net.tutsplus.com/tutorials/other/8-regular-expressions-you-should-know/
+            </summary>
+        </member>
+        <member name="F:CodeNode.Core.Utils.RegexUtils.EmailRegex">
+            <summary>
+                A regular expression for validating Email Addresses. Taken from
+                http://net.tutsplus.com/tutorials/other/8-regular-expressions-you-should-know/
+            </summary>
+        </member>
+        <member name="F:CodeNode.Core.Utils.RegexUtils.UrlRegex">
+            <summary>
+                A regular expression for validating absolute Urls. Taken from
+                http://net.tutsplus.com/tutorials/other/8-regular-expressions-you-should-know/
+            </summary>
+        </member>
+        <member name="F:CodeNode.Core.Utils.RegexUtils.PositiveNumberRegex">
+            <summary>
+                A regular expression for validating that string is a positive number GREATER THAN zero.
+            </summary>
+        </member>
+    </members>
+</doc>

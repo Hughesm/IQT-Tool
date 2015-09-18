@@ -5,6 +5,27 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IQT-Tool", "IQT-Tool\IQT-Tool.csproj", "{11D2790B-66D1-4916-B1E7-BF228A8859D1}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "IQT-Tool(2)", "IQT-Tool\", "{20CC2663-4886-4144-8DF6-EBC94399D167}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_64059"
+		Debug.AspNetCompiler.PhysicalPath = "IQT-Tool\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64059\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_64059"
+		Release.AspNetCompiler.PhysicalPath = "IQT-Tool\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64059\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "64059"
+		SlnRelativePath = "IQT-Tool\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +36,10 @@ Global
 		{11D2790B-66D1-4916-B1E7-BF228A8859D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11D2790B-66D1-4916-B1E7-BF228A8859D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11D2790B-66D1-4916-B1E7-BF228A8859D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20CC2663-4886-4144-8DF6-EBC94399D167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20CC2663-4886-4144-8DF6-EBC94399D167}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20CC2663-4886-4144-8DF6-EBC94399D167}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{20CC2663-4886-4144-8DF6-EBC94399D167}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

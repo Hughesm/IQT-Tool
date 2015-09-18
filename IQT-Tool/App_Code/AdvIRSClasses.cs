@@ -2,6 +2,7 @@
 using System.Data;
 using CodeEngine.Framework.QueryBuilder;
 using CodeEngine.Framework.QueryBuilder.Enums;
+using System.Configuration;
 
 /// <summary>
 /// Summary description for AdvIRSClasses
@@ -98,7 +99,7 @@ public class AdvIRS : iSearch
     public string AdiGeneral { get; set; }
     public string userName { get; set; }
     public string AreaChosen { get; set; }
-    protected const string SQLConnect = "Data Source=hq-ict-12580s;Initial Catalog=dmtreporting_dev;User=dmt;Password=Dmteam;";
+    protected string SQLConnect = ConfigurationManager.ConnectionStrings["constr"].ToString();
 
 
     /// <summary>

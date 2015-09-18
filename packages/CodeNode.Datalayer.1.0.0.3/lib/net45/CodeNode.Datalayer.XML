@@ -1,0 +1,702 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CodeNode.Datalayer</name>
+    </assembly>
+    <members>
+        <member name="T:CodeNode.Datalayer.Attributes.MapColumnAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:CodeNode.Datalayer.Provider.DataProvider">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:CodeNode.Datalayer.Provider.BaseDataProvider.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:CodeNode.Datalayer.Provider.BaseDataProvider"/> class.
+            </summary>
+        </member>
+        <member name="M:CodeNode.Datalayer.Provider.BaseDataProvider.#ctor(System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:CodeNode.Datalayer.Provider.BaseDataProvider"/> class.
+            </summary>
+            <param name="connectionStringName">Name of the connection string.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Provider.BaseDataProvider.SetConnectionString(System.String)">
+            <summary>
+                Sets the connection string.
+            </summary>
+            <param name="connectionStringName">Name of the connection string.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Provider.BaseDataProvider.CreateConnection">
+            <summary>
+                Gets the connection.
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NullReferenceException">Connection string not set.</exception>
+        </member>
+        <member name="M:CodeNode.Datalayer.Provider.BaseDataProvider.Dispose(System.Boolean)">
+            <summary>
+                Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing">
+                <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+                unmanaged resources.
+            </param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Provider.BaseDataProvider.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:CodeNode.Datalayer.Provider.DataProvider.CreateSqlCommand(CodeNode.Datalayer.Request.DataRequest,System.Data.SqlClient.SqlConnection)">
+            <summary>
+                Creates the command.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="sqlCon">The SQL con.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeNode.Datalayer.Provider.DataProvider.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:CodeNode.Datalayer.Provider.DataProvider"/> class.
+            </summary>
+        </member>
+        <member name="M:CodeNode.Datalayer.Provider.DataProvider.#ctor(System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:CodeNode.Datalayer.Provider.DataProvider"/> class.
+            </summary>
+            <param name="connectionStringName">Name of the connection string.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Provider.DataProvider.ExecuteDataReader(CodeNode.Datalayer.Request.DataRequest)">
+            <summary>
+                Executes the data reader.
+            </summary>
+            <param name="request">The request.</param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeNode.Datalayer.Provider.DataProvider.ExecuteDataReader(CodeNode.Datalayer.Request.DataRequest,System.Data.CommandBehavior)">
+            <summary>
+                Executes the data reader.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="behavior">The behavior.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">request</exception>
+        </member>
+        <member name="M:CodeNode.Datalayer.Provider.DataProvider.ExecuteScalar(CodeNode.Datalayer.Request.DataRequest)">
+            <summary>
+                Executes the scalar.
+            </summary>
+            <param name="request">The request.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">request</exception>
+        </member>
+        <member name="M:CodeNode.Datalayer.Provider.DataProvider.ExecuteNonQuery(CodeNode.Datalayer.Request.DataRequest)">
+            <summary>
+                Executes the non query.
+            </summary>
+            <param name="request">The request.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">request</exception>
+        </member>
+        <member name="M:CodeNode.Datalayer.Provider.DataProvider.ExecuteNonQueryForOutParameter``1(CodeNode.Datalayer.Request.DataRequest,System.String)">
+            <summary>
+                Executes the non query for out parameter.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="request">The request.</param>
+            <param name="parameterName">Name of the  output parameterName.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">request</exception>
+        </member>
+        <member name="M:CodeNode.Datalayer.Provider.DataProvider.ExecuteDataSet(CodeNode.Datalayer.Request.DataRequest)">
+            <summary>
+                Executes the data set.
+            </summary>
+            <param name="request">The request.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">request</exception>
+        </member>
+        <member name="M:CodeNode.Datalayer.Provider.DataProvider.ExecuteDataTable(CodeNode.Datalayer.Request.DataRequest)">
+            <summary>
+                Executes the data table.
+            </summary>
+            <param name="request">The request.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">request</exception>
+        </member>
+        <member name="M:CodeNode.Datalayer.Provider.DataProvider.ExecuteBulkCopy(CodeNode.Datalayer.Request.DataBulkRequest)">
+            <summary>
+                Bulks the copy.
+            </summary>
+            <param name="request">The request.</param>
+            <exception cref="T:System.ArgumentNullException">request</exception>
+        </member>
+        <member name="M:CodeNode.Datalayer.Request.DataParameter.#ctor(System.String,System.Object)">
+            <summary>
+                Initializes a new instance of the <see cref="T:CodeNode.Datalayer.Request.DataParameter"/> class.
+            </summary>
+            <param name="paramName">Name of the parameter.</param>
+            <param name="paramValue">The parameter value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Request.DataParameter.#ctor(System.String,System.Object,System.Data.ParameterDirection)">
+            <summary>
+                Initializes a new instance of the <see cref="T:CodeNode.Datalayer.Request.DataParameter"/> class.
+            </summary>
+            <param name="paramName">Name of the parameter.</param>
+            <param name="paramValue">The parameter value.</param>
+            <param name="paramDirection">The parameter direction.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Request.DataParameter.#ctor(System.Int32,System.Data.SqlDbType,System.String,System.Object)">
+            <summary>
+                Initializes a new instance of the <see cref="T:CodeNode.Datalayer.Request.DataParameter"/> class.
+            </summary>
+            <param name="size">The size.</param>
+            <param name="dataType">Type of the data.</param>
+            <param name="paramName">Name of the parameter.</param>
+            <param name="paramValue">The parameter value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Request.DataParameter.#ctor(System.Int32,System.Data.SqlDbType,System.String,System.Object,System.Data.ParameterDirection)">
+            <summary>
+                Initializes a new instance of the <see cref="T:CodeNode.Datalayer.Request.DataParameter"/> class.
+            </summary>
+            <param name="size">The size.</param>
+            <param name="dataType">Type of the data.</param>
+            <param name="paramName">Name of the parameter.</param>
+            <param name="paramValue">The parameter value.</param>
+            <param name="paramDirection">The parameter direction.</param>
+        </member>
+        <member name="T:CodeNode.Datalayer.Request.DataRequest">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:CodeNode.Datalayer.Request.DataRequest.#ctor(System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:CodeNode.Datalayer.Request.DataRequest"/> class.
+            </summary>
+            <param name="command">The command.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Request.DataRequest.#ctor(System.String,System.Data.CommandType)">
+            <summary>
+                Initializes a new instance of the <see cref="T:CodeNode.Datalayer.Request.DataRequest"/> class.
+            </summary>
+            <param name="command">The command.</param>
+            <param name="commandType">Type of the command.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Request.DataRequest.#ctor(System.String,System.Data.CommandType,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CodeNode.Datalayer.Request.DataRequest"/> class.
+            </summary>
+            <param name="command">The command.</param>
+            <param name="commandType">Type of the command.</param>
+            <param name="commandTimeOut">The command time out in second.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Request.DataRequest.#ctor(System.String,System.Data.CommandType,System.Boolean)">
+            <summary>
+                Initializes a new instance of the <see cref="T:CodeNode.Datalayer.Request.DataRequest"/> class.
+            </summary>
+            <param name="command">The command.</param>
+            <param name="commandType">Type of the command.</param>
+            <param name="prepare">if set to <c>true</c> [prepare].</param>
+        </member>
+        <member name="P:CodeNode.Datalayer.Request.DataRequest.Command">
+            <summary>
+                The AHDOC SQL statement to run against the data store.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:CodeNode.Datalayer.Request.DataRequest.Timeout">
+            <summary>
+                The timeout of the ADHOC request.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:CodeNode.Datalayer.Request.DataRequest.Params">
+            <summary>
+                The optional parameters for the ADHOC request.
+            </summary>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:CodeNode.Datalayer.Request.DataRequest.CommandType">
+            <summary>
+                Gets or sets the type of the command.
+            </summary>
+            <value>
+                The type of the command.
+            </value>
+        </member>
+        <member name="P:CodeNode.Datalayer.Request.DataRequest.Prepare">
+            <summary>
+                Gets or sets a value indicating whether this <see cref="T:CodeNode.Datalayer.Request.DataRequest"/> is prepare.
+            </summary>
+            <value>
+                <c>true</c> if prepare; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.#ctor(System.Data.IDataReader)">
+            <summary>
+                Initializes the SafeDataReader object to use data from
+                the provided DataReader object.
+            </summary>
+            <param name="dataReader">The source DataReader object containing the data.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetString(System.Int32)">
+            <summary>
+                Gets a string value from the datareader.
+            </summary>
+            <remarks>
+                Returns empty string for null.
+            </remarks>
+            <param name="i">Ordinal column position of the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetString(System.String)">
+            <summary>
+                Gets a string value from the data reader.
+            </summary>
+            <remarks>
+                Returns empty string for null.
+            </remarks>
+            <param name="name">Name of the column containing the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetValue(System.Int32)">
+            <summary>
+                Gets a value of type <see cref="T:System.Object"/> from the datareader.
+            </summary>
+            <param name="i">Ordinal column position of the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetValue(System.String)">
+            <summary>
+                Gets a value of type <see cref="T:System.Object"/> from the datareader.
+            </summary>
+            <param name="name">Name of the column containing the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetInt32(System.Int32)">
+            <summary>
+                Gets an integer from the datareader.
+            </summary>
+            <remarks>
+                Returns 0 for null.
+            </remarks>
+            <param name="i">Ordinal column position of the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetInt32(System.String)">
+            <summary>
+                Gets an integer from the datareader.
+            </summary>
+            <remarks>
+                Returns 0 for null.
+            </remarks>
+            <param name="name">Name of the column containing the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetDouble(System.Int32)">
+            <summary>
+                Gets a double from the datareader.
+            </summary>
+            <remarks>
+                Returns 0 for null.
+            </remarks>
+            <param name="i">Ordinal column position of the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetDouble(System.String)">
+            <summary>
+                Gets a double from the datareader.
+            </summary>
+            <remarks>
+                Returns 0 for null.
+            </remarks>
+            <param name="name">Name of the column containing the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetGuid(System.Int32)">
+            <summary>
+                Gets a Guid value from the datareader.
+            </summary>
+            <remarks>
+                Returns Guid.Empty for null.
+            </remarks>
+            <param name="i">Ordinal column position of the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetGuid(System.String)">
+            <summary>
+                Gets a Guid value from the datareader.
+            </summary>
+            <remarks>
+                Returns Guid.Empty for null.
+            </remarks>
+            <param name="name">Name of the column containing the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.Read">
+            <summary>
+                Reads the next row of data from the datareader.
+            </summary>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.NextResult">
+            <summary>
+                Moves to the next result set in the datareader.
+            </summary>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.Close">
+            <summary>
+                Closes the datareader.
+            </summary>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetBoolean(System.Int32)">
+            <summary>
+                Gets a boolean value from the datareader.
+            </summary>
+            <remarks>
+                Returns <see langword="false" /> for null.
+            </remarks>
+            <param name="i">Ordinal column position of the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetBoolean(System.String)">
+            <summary>
+                Gets a boolean value from the datareader.
+            </summary>
+            <remarks>
+                Returns <see langword="false" /> for null.
+            </remarks>
+            <param name="name">Name of the column containing the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetByte(System.Int32)">
+            <summary>
+                Gets a byte value from the datareader.
+            </summary>
+            <remarks>
+                Returns 0 for null.
+            </remarks>
+            <param name="i">Ordinal column position of the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetByte(System.String)">
+            <summary>
+                Gets a byte value from the datareader.
+            </summary>
+            <remarks>
+                Returns 0 for null.
+            </remarks>
+            <param name="name">Name of the column containing the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+                Invokes the GetBytes method of the underlying datareader.
+            </summary>
+            <remarks>
+                Returns 0 for null.
+            </remarks>
+            <param name="i">Ordinal column position of the value.</param>
+            <param name="buffer">Array containing the data.</param>
+            <param name="bufferOffset">Offset position within the buffer.</param>
+            <param name="fieldOffset">Offset position within the field.</param>
+            <param name="length">Length of data to read.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetBytes(System.String,System.Int64,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+                Invokes the GetBytes method of the underlying datareader.
+            </summary>
+            <remarks>
+                Returns 0 for null.
+            </remarks>
+            <param name="name">Name of the column containing the value.</param>
+            <param name="buffer">Array containing the data.</param>
+            <param name="bufferOffset">Offset position within the buffer.</param>
+            <param name="fieldOffset">Offset position within the field.</param>
+            <param name="length">Length of data to read.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetChar(System.Int32)">
+            <summary>
+                Gets a char value from the datareader.
+            </summary>
+            <remarks>
+                Returns Char.MinValue for null.
+            </remarks>
+            <param name="i">Ordinal column position of the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetChar(System.String)">
+            <summary>
+                Gets a char value from the datareader.
+            </summary>
+            <remarks>
+                Returns Char.MinValue for null.
+            </remarks>
+            <param name="name">Name of the column containing the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)">
+            <summary>
+                Invokes the GetChars method of the underlying datareader.
+            </summary>
+            <remarks>
+                Returns 0 for null.
+            </remarks>
+            <param name="i">Ordinal column position of the value.</param>
+            <param name="buffer">Array containing the data.</param>
+            <param name="bufferOffset">Offset position within the buffer.</param>
+            <param name="fieldOffset">Offset position within the field.</param>
+            <param name="length">Length of data to read.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetChars(System.String,System.Int64,System.Char[],System.Int32,System.Int32)">
+            <summary>
+                Invokes the GetChars method of the underlying datareader.
+            </summary>
+            <remarks>
+                Returns 0 for null.
+            </remarks>
+            <param name="name">Name of the column containing the value.</param>
+            <param name="buffer">Array containing the data.</param>
+            <param name="bufferOffset">Offset position within the buffer.</param>
+            <param name="fieldOffset">Offset position within the field.</param>
+            <param name="length">Length of data to read.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetData(System.Int32)">
+            <summary>
+                Invokes the GetData method of the underlying datareader.
+            </summary>
+            <param name="i">Ordinal column position of the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetData(System.String)">
+            <summary>
+                Invokes the GetData method of the underlying datareader.
+            </summary>
+            <param name="name">Name of the column containing the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetDataTypeName(System.Int32)">
+            <summary>
+                Invokes the GetDataTypeName method of the underlying datareader.
+            </summary>
+            <param name="i">Ordinal column position of the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetDataTypeName(System.String)">
+            <summary>
+                Invokes the GetDataTypeName method of the underlying datareader.
+            </summary>
+            <param name="name">Name of the column containing the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetDateTime(System.Int32)">
+            <summary>
+                Gets a date value from the datareader.
+            </summary>
+            <remarks>
+                Returns DateTime.MinValue for null.
+            </remarks>
+            <param name="i">Ordinal column position of the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetDateTime(System.String)">
+            <summary>
+                Gets a date value from the datareader.
+            </summary>
+            <remarks>
+                Returns DateTime.MinValue for null.
+            </remarks>
+            <param name="name">Name of the column containing the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetDecimal(System.Int32)">
+            <summary>
+                Gets a decimal value from the datareader.
+            </summary>
+            <remarks>
+                Returns 0 for null.
+            </remarks>
+            <param name="i">Ordinal column position of the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetDecimal(System.String)">
+            <summary>
+                Gets a decimal value from the datareader.
+            </summary>
+            <remarks>
+                Returns 0 for null.
+            </remarks>
+            <param name="name">Name of the column containing the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetFieldType(System.Int32)">
+            <summary>
+                Invokes the GetFieldType method of the underlying datareader.
+            </summary>
+            <param name="i">Ordinal column position of the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetFieldType(System.String)">
+            <summary>
+                Invokes the GetFieldType method of the underlying datareader.
+            </summary>
+            <param name="name">Name of the column containing the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetFloat(System.Int32)">
+            <summary>
+                Gets a Single value from the datareader.
+            </summary>
+            <remarks>
+                Returns 0 for null.
+            </remarks>
+            <param name="i">Ordinal column position of the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetFloat(System.String)">
+            <summary>
+                Gets a Single value from the datareader.
+            </summary>
+            <remarks>
+                Returns 0 for null.
+            </remarks>
+            <param name="name">Name of the column containing the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetInt16(System.Int32)">
+            <summary>
+                Gets a Short value from the datareader.
+            </summary>
+            <remarks>
+                Returns 0 for null.
+            </remarks>
+            <param name="i">Ordinal column position of the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetInt16(System.String)">
+            <summary>
+                Gets a Short value from the datareader.
+            </summary>
+            <remarks>
+                Returns 0 for null.
+            </remarks>
+            <param name="name">Name of the column containing the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetInt64(System.Int32)">
+            <summary>
+                Gets a Long value from the datareader.
+            </summary>
+            <remarks>
+                Returns 0 for null.
+            </remarks>
+            <param name="i">Ordinal column position of the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetInt64(System.String)">
+            <summary>
+                Gets a Long value from the datareader.
+            </summary>
+            <remarks>
+                Returns 0 for null.
+            </remarks>
+            <param name="name">Name of the column containing the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetName(System.Int32)">
+            <summary>
+                Invokes the GetName method of the underlying datareader.
+            </summary>
+            <param name="i">Ordinal column position of the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetOrdinal(System.String)">
+            <summary>
+                Gets an ordinal value from the datareader.
+            </summary>
+            <param name="name">Name of the column containing the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetSchemaTable">
+            <summary>
+                Invokes the GetSchemaTable method of the underlying datareader.
+            </summary>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.GetValues(System.Object[])">
+            <summary>
+                Invokes the GetValues method of the underlying datareader.
+            </summary>
+            <param name="values">
+                An array of System.Object to
+                copy the values into.
+            </param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.IsDBNull(System.Int32)">
+            <summary>
+                Invokes the IsDBNull method of the underlying datareader.
+            </summary>
+            <param name="i">Ordinal column position of the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.IsDBNull(System.String)">
+            <summary>
+                Invokes the IsDBNull method of the underlying datareader.
+            </summary>
+            <param name="name">Name of the column containing the value.</param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.Dispose(System.Boolean)">
+            <summary>
+                Disposes the object.
+            </summary>
+            <param name="disposing">
+                True if called by
+                the public Dispose method.
+            </param>
+        </member>
+        <member name="M:CodeNode.Datalayer.Reader.NullSafeDataReader.Dispose">
+            <summary>
+                Disposes the object.
+            </summary>
+        </member>
+        <member name="P:CodeNode.Datalayer.Reader.NullSafeDataReader.DataReader">
+            <summary>
+                Get a reference to the underlying data reader
+                object that actually contains the data from
+                the data source.
+            </summary>
+        </member>
+        <member name="P:CodeNode.Datalayer.Reader.NullSafeDataReader.Depth">
+            <summary>
+                Returns the depth property value from the datareader.
+            </summary>
+        </member>
+        <member name="P:CodeNode.Datalayer.Reader.NullSafeDataReader.FieldCount">
+            <summary>
+                Returns the FieldCount property from the datareader.
+            </summary>
+        </member>
+        <member name="P:CodeNode.Datalayer.Reader.NullSafeDataReader.IsClosed">
+            <summary>
+                Returns the IsClosed property value from the datareader.
+            </summary>
+        </member>
+        <member name="P:CodeNode.Datalayer.Reader.NullSafeDataReader.Item(System.String)">
+            <summary>
+                Returns a value from the datareader.
+            </summary>
+            <param name="name">Name of the column containing the value.</param>
+        </member>
+        <member name="P:CodeNode.Datalayer.Reader.NullSafeDataReader.Item(System.Int32)">
+            <summary>
+                Returns a value from the data reader.
+            </summary>
+            <param name="i">Ordinal column position of the value.</param>
+        </member>
+        <member name="P:CodeNode.Datalayer.Reader.NullSafeDataReader.RecordsAffected">
+            <summary>
+                Returns the RecordsAffected property value from the underlying datareader.
+            </summary>
+        </member>
+        <member name="T:CodeNode.Datalayer.Extensions.NullSafeDataReaderExtention">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CodeNode.Datalayer.Extensions.NullSafeDataReaderExtention.MapToObject``1(CodeNode.Datalayer.Reader.INullSafeDataReader,System.Boolean)">
+            <summary>
+                Get Object of type T form data reader
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dataReader">The data reader.</param>
+            <param name="useMapColumnAttribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeNode.Datalayer.Extensions.NullSafeDataReaderExtention.MapToList``1(CodeNode.Datalayer.Reader.INullSafeDataReader,System.Boolean)">
+            <summary>
+                Get list of object of type T form data reader
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dataReader">The data reader.</param>
+            <param name="useMapColumnAttribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CodeNode.Datalayer.Extensions.NullSafeDataReaderExtention.GetObject``1(CodeNode.Datalayer.Reader.INullSafeDataReader,System.Boolean)">
+            <summary>
+            Gets the object.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dataReader">The data reader.</param>
+            <param name="useMapColumnAttribute">if set to <c>true</c> [use map column attribute].</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
