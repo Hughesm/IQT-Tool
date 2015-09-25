@@ -139,7 +139,8 @@ public partial class Search : Page
         //Label1.Text = Global.SelectedIncident;
 
 
-        Response.Redirect("Reports.aspx?ID=" + Server.UrlEncode(GridView1.SelectedRow.Cells[1].Text));
+     //   Response.Redirect("Reports.aspx?ID=" + Server.UrlEncode(GridView1.SelectedRow.Cells[1].Text));
+        Server.Transfer("Reports.aspx?ID=" + Server.UrlEncode(GridView1.SelectedRow.Cells[1].Text));
 
 
 

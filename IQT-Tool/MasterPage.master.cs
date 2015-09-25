@@ -55,7 +55,15 @@ public partial class MasterPage : System.Web.UI.MasterPage
     protected void OnSelectedIndexChanged(object sender, EventArgs e)
     {
 
-        if (IncidentValue.Text == string.Empty) { Response.Redirect("Search.aspx"); } else { Response.Redirect("Reports.aspx?ID=" + Server.UrlEncode(IncidentValue.Text)); }
+        if (IncidentValue.Text == string.Empty)
+        { 
+            Response.Redirect("Search.aspx");
+             } 
+             else
+              {
+                Response.Redirect("Reports.aspx?ID=" + Server.UrlEncode(IncidentValue.Text));
+                }
+                
         Session["IncidentNumber"] = IncidentValue.Text;
 
     }
@@ -63,6 +71,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
     protected void SubmitInc_Click(object sender, EventArgs e)
     {
         Response.Redirect("Reports.aspx?ID=" + IncidentValue);
+      
     }
 
     public void DeactivateDebug_Click(object sender, EventArgs e)
@@ -103,7 +112,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
             }
         }
     }
-
+//note: Server.Transfer takes place on the sever and not the client(browser) it should be more efficient but ive left the original redirect incase you need it - MH
     protected void IAT_OnClick(object sender, EventArgs e)
     {
         WinAuth.AddArea(WindowsAuthentication.PerformancePortal.Iat);
@@ -124,6 +133,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
         WinAuth.TrackerSql();
 
         Response.Redirect("http://hq-ict-09440v:8080/CorVu/g?KPITool");
+        Server.Transfer("http://hq-ict-09440v:8080/CorVu/g?KPITool");
 
     }
 
@@ -131,56 +141,64 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
         WinAuth.AddArea((WindowsAuthentication.PerformancePortal.Framework));
         WinAuth.TrackerSql();
-        Response.Redirect("http://hq-ict-09440v:8080/CorVu/g?KPIFramework");
+       // Response.Redirect("http://hq-ict-09440v:8080/CorVu/g?KPIFramework");
+        Server.Transfer("http://hq-ict-09440v:8080/CorVu/g?KPIFramework");
     }
 
     protected void Benchmarking_OnClick(object sender, EventArgs e)
     {
         WinAuth.AddArea((WindowsAuthentication.PerformancePortal.Ibt));
         WinAuth.TrackerSql();
-        Response.Redirect("http://hq-ict-09440v:8080/CorVu/g?InternalBenchMarkingToolv7");
+       // Response.Redirect("http://hq-ict-09440v:8080/CorVu/g?InternalBenchMarkingToolv7");
+        Server.Transfer("http://hq-ict-09440v:8080/CorVu/g?InternalBenchMarkingToolv7");
     }
 
     protected void QuarterlyTool_OnClick(object sender, EventArgs e)
     {
         WinAuth.AddArea((WindowsAuthentication.PerformancePortal.Qrt));
         WinAuth.TrackerSql();
-        Response.Redirect("http://hq-ict-09440v:8080/CorVu/g?qtr");
+      //Response.Redirect("http://hq-ict-09440v:8080/CorVu/g?qtr");
+        Server.Transfer("http://hq-ict-09440v:8080/CorVu/g?qtr");
     }
 
     protected void QueryTool_OnClick(object sender, EventArgs e)
     {
         WinAuth.AddArea((WindowsAuthentication.PerformancePortal.Iqt));
         WinAuth.TrackerSql();
-        Response.Redirect("http://hq-ict-12592v/misdv/");
+        //Response.Redirect("http://hq-ict-12592v/misdv/");
+        Server.Transfer("http://hq-ict-12592v/misdv/");
     }
 
     protected void KPIScore_OnClick(object sender, EventArgs e)
     {
         WinAuth.AddArea((WindowsAuthentication.PerformancePortal.Ckpi));
         WinAuth.TrackerSql();
-        Response.Redirect("http://hq-ict-09440v:8080/CorVu/g?KPI_New_Dev");
+        //Response.Redirect("http://hq-ict-09440v:8080/CorVu/g?KPI_New_Dev");
+        Server.Transfer("http://hq-ict-09440v:8080/CorVu/g?KPI_New_Dev");
     }
 
     protected void StationScore_OnClick(object sender, EventArgs e)
     {
         WinAuth.AddArea((WindowsAuthentication.PerformancePortal.Ss));
         WinAuth.TrackerSql();
-        Response.Redirect("http://hq-ict-09440v:8080/CorVu/g?Station_Scorecards_V5");
+        //Response.Redirect("http://hq-ict-09440v:8080/CorVu/g?Station_Scorecards_V5");
+        Server.Transfer("http://hq-ict-09440v:8080/CorVu/g?Station_Scorecards_V5");
     }
 
     protected void Mos_OnClick(object sender, EventArgs e)
     {
         WinAuth.AddArea((WindowsAuthentication.PerformancePortal.Mos));
         WinAuth.TrackerSql();
-        Response.Redirect("http://hq-ict-09440v:8080/CorVu3/go?MOS");
+       //Response.Redirect("http://hq-ict-09440v:8080/CorVu3/go?MOS");
+        Server.Transfer("http://hq-ict-09440v:8080/CorVu3/go?MOS");
     }
 
     protected void Emergency_OnClick(object sender, EventArgs e)
     {
         WinAuth.AddArea((WindowsAuthentication.PerformancePortal.Er));
         WinAuth.TrackerSql();
-        Response.Redirect("http://hq-ict-09440v:8080/CorVu/g?EmergencyResponse_dev");
+     //   Response.Redirect("http://hq-ict-09440v:8080/CorVu/g?EmergencyResponse_dev");
+        Server.Transfer("http://hq-ict-09440v:8080/CorVu/g?EmergencyResponse_dev");
 
     }
 

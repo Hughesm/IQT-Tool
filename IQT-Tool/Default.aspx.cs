@@ -46,7 +46,8 @@ public partial class _Default : Page
     {
         try
         {
-            Response.Redirect("http://mysite/Person.aspx?accountname=gmfs%5C" + user);
+            //Response.Redirect("http://mysite/Person.aspx?accountname=gmfs%5C" + user);
+		Server.Transfer("http://mysite/Person.aspx?accountname=gmfs%5C" + user);
         }
         catch (Exception exec)
         {
