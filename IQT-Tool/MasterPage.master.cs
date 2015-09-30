@@ -166,7 +166,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
         WinAuth.AddArea((WindowsAuthentication.PerformancePortal.Iqt));
         WinAuth.TrackerSql();
         //Response.Redirect("http://hq-ict-12592v/misdv/");
-        Server.Transfer("http://hq-ict-12592v/misdv/");
+        Server.Transfer("http://hq-ict-13590v/iqt/");
     }
 
     protected void KPIScore_OnClick(object sender, EventArgs e)
